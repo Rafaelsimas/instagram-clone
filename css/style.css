@@ -1,0 +1,528 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --body-bg-color:#E5E5E5;
+    --menu-bg-color:white;
+}
+
+body{
+    background: var(--body-bg-color);
+
+}
+
+/* ============================MENU============================ */
+#top{
+    width: 100%;
+    height:54px;
+    display: flex;
+    justify-content: center;
+    background: var(--menu-bg-color);
+    
+}
+
+#box{
+    width: 80%;
+    height:54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-logo, .box-search, .box-actions{
+    width: 250px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-search input{
+    width: 100%;
+    text-align: center;
+    border: none;
+    background: var(--body-bg-color);
+    padding: 0.4rem;
+}
+
+
+/* ============================GENERAL============================ */
+#general {
+    margin-top: 2.8rem;
+    width: 71%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ==========================BARRA DE ROLAGEM====================== */
+/* Works on Firefox */
+#general .story-and-posts .storys {
+    scrollbar-width: thin;
+    scrollbar-color: blue orange;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  #general .story-and-posts .storys::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  #general .story-and-posts .storys::-webkit-scrollbar-track {
+    background: var(--menu-bg-color);
+  }
+  
+  #general .story-and-posts .storys::-webkit-scrollbar-thumb {
+    background-color: var(--body-bg-color);
+    border-radius: 20px;
+    border: 3px solid var(--menu-bg-color);
+  }
+  /* ===================STORY=================== */
+
+#general .story-and-posts{
+   
+    width: 65%;
+}
+
+#general .story-and-posts .storys {
+    width: 97%;
+    height: 144px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    background-color: var(--menu-bg-color);
+    border: 2px solid lightgrey;
+}
+
+#general .story-and-posts .storys .thumb {
+    
+    margin: 1px;
+    width: 99px;
+    height: 119px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#general .story-and-posts .storys .thumb .name-user {
+    font-size: 0.6rem;
+    margin-top: 10px;
+}
+
+#general .story-and-posts .storys img {
+    width: 64px;
+    height: 66px;
+    margin-left: 5px;
+    border-radius: 50%;
+    border: 2px solid red;
+    padding: 2px;
+    object-fit: cover;
+    margin-top: 1.1rem;
+}
+
+/* ====================SIDEBAR================== */
+
+#general .sidebar {
+    position: fixed;
+    right: 73px;
+    width: 35%;
+    margin-top: -140rem;
+}
+
+#general .sidebar .card-user-sidebar{
+    padding: 0.3rem;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.9rem;
+}
+#general .sidebar .card-user-sidebar .box-info-user .name-user{
+    font-weight: bold;
+}
+
+
+#general .sidebar .card-user-sidebar img {
+    width: 57px;
+    height: 57px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ===========================SUGESTÕES========================== */
+
+.sugestoes {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 82%;
+}
+
+
+
+.lista-de-sugestoes li{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.lista-de-sugestoes li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    align-items: center;
+    width: 93%;
+    margin-top: -2.2rem;
+}
+.lista-de-sugestoes li .box-list-users{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.lista-de-sugestoes, p{
+    color: rgb(114, 114, 114);
+    font-weight: normal;
+}
+.lista-de-sugestoes, a{
+    color: black;
+    font-weight: normal;
+}
+
+.lista-de-sugestoes li .box-list-users img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.lista-de-sugestoes li .box-list-users .name-user{
+    color: black;
+    font-weight: bold;
+}
+.lista-de-sugestoes li .box-list-users .status-friend{
+    color: black;
+    font-weight: normal;
+}
+
+.lista-de-sugestoes li .request-contact{
+    color: blue;
+}
+
+/* =======================POSTS============================= */
+
+.posts {
+    width: 97%;
+    
+}
+
+.posts .post{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    margin-bottom: 8.5rem;
+}
+.posts .post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.posts .post .header-post {
+    margin-top: 4.8rem;
+    background: var(--menu-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid lightgrey;
+}
+.posts .post .header-post .box-user-identifier{
+  
+   width: 250px;
+   display: flex;
+   align-items: center;
+}
+
+.posts .post .header-post .box-user-identifier img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+    padding: 5px;
+}
+
+.posts .post .header-post .box-user-identifier .name-user .user-user-action,
+.posts .post .header-post .box-user-identifier .name-user {
+   margin-left: 0.5rem;
+   font-weight: 500;
+}
+
+.footer-post {
+    width: 100%;
+    height: 93px;
+}
+
+.box-footer-post {
+    background-color: var(--menu-bg-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border: 2px solid lightgrey;
+}
+
+@media (max-width:700px) {
+    /* ============================MENU============================ */
+#top{
+    width: 100%;
+    height:54px;
+    display: flex;
+    justify-content: center;
+    background: var(--menu-bg-color);
+    
+}
+
+#box{
+    width: 90%;
+    height:54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-logo img{
+    width: 50%;
+}
+
+.box-logo, .box-search, .box-actions{
+    width: 50%;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box-search input {
+    width: 100%;
+    text-align: center;
+    border: none;
+    background: var(--body-bg-color);
+    padding: 0.4rem;
+}
+/* ============================GENERAL============================ */
+#general {
+    margin-top: 0.8rem;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+  /* ===================STORY=================== */
+
+  #general .story-and-posts{
+   
+    width: 100%;
+}
+
+#general .story-and-posts .storys {
+    width: 100%;
+    height: 144px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    background-color: var(--menu-bg-color);
+    border: 2px solid lightgrey;
+}
+
+#general .story-and-posts .storys .thumb {
+    
+    margin: 1px;
+    width: 100px;
+    height: 119px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#general .story-and-posts .storys .thumb .name-user {
+    font-size: 0.6rem;
+    margin-top: 10px;
+}
+
+#general .story-and-posts .storys img {
+    width: 64px;
+    height: 66px;
+    margin-left: 0px;
+    border-radius: 50%;
+    border: 2px solid red;
+    padding: 2px;
+    object-fit: cover;
+    margin-top: 1.1rem;
+}
+
+/* ====================SIDEBAR================== */
+
+#general .sidebar {
+    position: fixed;
+    right: 0px;
+    width: 100%;
+    margin-top: 0rem;
+}
+
+#general .sidebar .card-user-sidebar{
+    padding: 0.3rem;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.1rem;
+}
+#general .sidebar .card-user-sidebar .box-info-user .name-user{
+    font-weight: bold;
+}
+
+
+#general .sidebar .card-user-sidebar img {
+    width: 100px;
+    height: 57px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ===========================SUGESTÕES========================== */
+
+.sugestoes {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.lista-de-sugestoes li{
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.lista-de-sugestoes li {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    align-items: center;
+    width: 100%;
+    margin-top: -2.2rem;
+}
+.lista-de-sugestoes li .box-list-users{
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+.lista-de-sugestoes, p{
+    color: rgb(114, 114, 114);
+    font-weight: normal;
+}
+.lista-de-sugestoes, a{
+    color: black;
+    font-weight: normal;
+}
+
+.lista-de-sugestoes li .box-list-users img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.lista-de-sugestoes li .box-list-users .name-user{
+    color: black;
+    font-weight: bold;
+}
+.lista-de-sugestoes li .box-list-users .status-friend{
+    color: black;
+    font-weight: normal;
+}
+
+.lista-de-sugestoes li .request-contact{
+    color: blue;
+}
+
+/* =======================POSTS============================= */
+
+.posts {
+    width: 100%;
+    
+}
+
+.posts .post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 700px;
+    margin-bottom: 2.5rem;
+}
+.posts .post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.posts .post .header-post {
+    margin-top: 4.8rem;
+    background: var(--menu-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid lightgrey;
+}
+.posts .post .header-post .box-user-identifier{
+  
+   width: 100%;
+   display: flex;
+   align-items: center;
+}
+
+.posts .post .header-post .box-user-identifier img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 2px solid red; */
+    padding: 5px;
+}
+
+.posts .post .header-post .box-user-identifier .name-user .user-user-action,
+.posts .post .header-post .box-user-identifier .name-user {
+   margin-left: 0.1rem;
+   font-weight: 500;
+}
+
+}
